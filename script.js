@@ -22,21 +22,38 @@ window.onload = () => {
     displayNotes(data);
 }
 
-submit.addEventListener('click', async function (e) {
-   const date =  new Date().toLocaleString();
-   console.log('dsat:', date);
-   const st = { 
-       date: date,
-       title: title.value,
-       editor: editor.value
-    }  
-    data.push(st);
-    await localStorage.setItem("noteObj", JSON.stringify(data));
-    title.value = '';
-    editor.value ='';
-    displayNotes(data);
-    console.log('st: ',st);  
-})
+title.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            saveNotes()
+        }
+});
+
+editor.addEventListener('keypress', function (e) {
+    
+        if (e.key === 'Enter') {
+            saveNotes();       
+    }
+});
+
+submit.addEventListener('click', saveNotes);
+
+async function saveNotes (e) {
+    if (!title.value) throw alert('Please enter title');
+    else if (!editor.value ) throw alert('Please enter notes first');
+    const date =  new Date().toLocaleString();
+    console.log('dsat:', date);
+    const st = { 
+        date: date,
+        title: title.value,
+        editor: editor.value
+     }  
+     data.push(st);
+     await localStorage.setItem("noteObj", JSON.stringify(data));
+     title.value = '';
+     editor.value ='';
+     displayNotes(data);
+     console.log('st: ',st);  
+ }
 
  async function displayNotes (data){
    data = data.sort(compareValues('date', 'desc'));

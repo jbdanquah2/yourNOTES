@@ -1,3 +1,7 @@
+body {
+    width: 100%;
+}
+
 main {
     width: 100%;
     max-width: 700px;
@@ -6,7 +10,7 @@ main {
 }
 
 main div textarea,
-input {
+input, button {
     width: 500px;
     max-width: 100%;
     margin: 0 auto;
@@ -29,12 +33,13 @@ input:focus {
     border-color: rgba(162, 223, 113, 0.5);
 }
 
-input[type='submit']:focus {
+button:focus {
     background-color: rgba(48, 65, 35, 0.5);
 }
 
 .notes {
-    margin: 1px 5px;
+    width: 100%;
+    margin: 1px;
     padding: 10px 25px;
     text-align: justify;
     border: 1px solid rgba(162, 223, 113, 0.5);
@@ -46,9 +51,16 @@ input[type='submit']:focus {
     text-align: center;
 }
 
+#msg {
+    display: table;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 footer {
     padding: 15px 0;
-    margin: 50px 0 0;
+    margin: 50px 0 0 0;
     position: relative;
     left: 0;
     bottom: 0;
