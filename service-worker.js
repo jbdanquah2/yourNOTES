@@ -1,6 +1,6 @@
 let filesToCache = resourceToCache();
 
-const staticCacheName = 'yourNOTES-v1';
+const staticCacheName = 'yourNOTES-v2';
 
 self.addEventListener('install', event => {
   console.log('Attempting to install service worker and cache static assets');
