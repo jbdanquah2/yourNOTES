@@ -3,9 +3,15 @@ body {
     min-height: 100%;
 }
 
+.navbar {
+    background-color: rgba(81, 150, 144, 0.8)!important;
+}
+
 #brand {
     font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
+    color: rgba(241, 226, 15, 0.8) ;
+    font-size: small;
 }
 
 .container {
@@ -14,10 +20,8 @@ body {
   
 }
 
-main {
-  
+main { 
     margin: 0 auto;
-    /* margin-top: 5%; */
 }
 
 main div textarea,
@@ -35,22 +39,18 @@ main div textarea {
     border-color: rgba(132, 170, 100, 0.5);
 }
 
-textarea:focus {
-    text-align: left;
-}
-
 input:focus {
     text-align: center;
     border-color: rgba(162, 223, 113, 0.5);
 }
 
 main button:focus {
-    background-color: rgba(48, 65, 35, 0.5);
+    background-color: rgba(191, 203, 204, 0.6);
 }
 
 .notes {
     width: 100%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 10px 25px;
     text-align: justify;
     border: 1px solid rgba(162, 223, 113, 0.5);
@@ -83,10 +83,10 @@ main button:focus {
 }
 
 #msg {
-    display: table;
-    max-width: 400px;
+    /* display: table; */
+    max-width: 350px;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 footer {

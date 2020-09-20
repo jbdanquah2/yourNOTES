@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta name="description" content="yourNOTES keeps your notes safe for quick reference wherever you may be">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#12ffff">
+    <meta name="theme-color" content="#42539e">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/bootstrap.min.css">
@@ -20,16 +21,16 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div id="brand">yourNOTES</div>
+    <nav class="navbar navbar-expand-lg shadow-lg fixed-top mb-5">
+        <div id="brand"><span><img src="favicon-32x32.png" alt=""></span> yourNOTES</div>
     </nav>
     <div class="container">
-        <main >
+        <main ><br>
             <div class="editor mt-5">
                 <input id="title" class="shadow" aria-label="enter title here" type="text" name="title"
                     placeholder="enter title here..."><br>
                 <textarea name="editor" id="editor" cols="70" rows="5" aria-label="enter notes here"
-                    placeholder="Your message here..">
+                    placeholder="Your message here...">
                 </textarea><br>
                 <button placeholder="Save" id="submit" class="shadow" type="button"
                     aria-label="submit button">Save</button>
@@ -37,13 +38,11 @@
         </main>
         <hr>
        <!-- <button value=""></button> -->
-       <div class="container">
+    <div class="container">
         <div id="notes-area" class="row">
             <div class="col-md-4 col-sm-12 ">
-                <div class="notes shadow">
-                    <h5 id="msg" aria-label="topic of notes">Your notes will appear here!</h5>
-
-                </div>
+                
+                <h6 id="msg" aria-label="topic of notes">Your notes will appear here!</h6>
             </div>
         </div>
       </div>
@@ -51,7 +50,7 @@
     
 <br><br><br><br>
 
-    <footer class="fixed-bottom">
+    <footer class="fixed-bottom shadow">
         <p>yjbdanquah &copy; pwa </p>
     </footer>
     <!-- Optional JavaScript -->

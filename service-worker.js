@@ -1,18 +1,16 @@
 let filesToCache = resourceToCache();
 
-const staticCacheName = 'yourNOTES-v2';
+const staticCacheName = 'yourNOTES-v1';
 
 self.addEventListener('install', event => {
   console.log('Attempting to install service worker and cache static assets');
-  
-  self.skipWaiting();
-
   event.waitUntil(
     caches.open(staticCacheName)
       .then(cache => {
         return cache.addAll(filesToCache);
       })
   );
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
